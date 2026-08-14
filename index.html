@@ -108,7 +108,34 @@ button:hover {
 label {
     font-weight: bold;
 }
+/* MOBILE SCREEN FIX */
+@media (max-width: 600px) {
 
+    .header {
+        position: relative;
+        min-height: 75px;
+        padding: 15px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 55px;
+        height: 55px;
+        left: 10px;
+        top: 10px;
+        border-width: 2px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+        margin: 0;
+        padding-left: 65px;
+        padding-right: 5px;
+        line-height: 1.2;
+    }
+}
 
 </style>
 
