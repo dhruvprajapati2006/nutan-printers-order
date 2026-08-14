@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="header">
+
+    <img src="C:\Users\Dhruv Prajapati\Desktop\NP SCANNER\WhatsApp Image 2026-08-03 at 4.43.32 PM.jpeg" class="logo">
+
+    <h1>NUTAN PRINTERS ORDER</h1>
+
+</div>
+
+<style>
+    
+.option-box {
+    display: none;
+    background: #f8f8f8;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.check-option {
+    display: block;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.check-option input[type="checkbox"] {
+    width: auto;
+    margin: 0 8px 0 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.header {
+    background: #d71920;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    position: absolute;
+    left: 20px;
+    top: 15px;
+
+    border: 3px solid white;
+
+    background: white;
+}
+
+.header h1 {
+    margin: 10px 0 0;
+    font-size: 28px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: green;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0a7a0a;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+ <P4>ORDER FORM</P4>
+
+</div>
+
+
+<div class="container">
+
+
+<label>Full Name</label>
+
+<input type="text" id="name">
+
+
+<label>Mobile Number</label>
+
+<input type="number" id="mobile">
+
+
+<label>Select Product</label>
+
+
+
+<select id="product" onchange="showOptions()">
+
+    <option value="">-- Select Product --</option>
+
+    <option value="Visiting Card">Visiting Card</option>
+    <option value="Bill Book">Bill Book</option>
+    <option value="Pamphlet">Pamphlet</option>
+    <option value="Flex Banner">Flex Banner</option>
+    <option value="Office Stationery">Office Stationery</option>
+    <option value="Lagna Kankotri">Lagna Kankotri</option>
+    <option value="Letterpad">Letterpad</option>
+    <option value="Screen Printing">Screen Printing</option>
+    <option value="Offset Printing">Offset Printing</option>
+    <option value="Calendar">Calendar</option>
+    <option value="Rubber Stamp">Rubber Stamp</option>
+    <option value="Colour Xerox">Colour Xerox</option>
+    <option value="Lamination">Lamination</option>
+    <option value="Passport Size Photo">Passport Size Photo</option>
+
+</select>
+<div id="productOptions">
+
+    <!-- VISITING CARD -->
+    <div id="visitingCardOptions" class="option-box">
+
+        <label>Visiting Card Type</label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Single Side">
+            Single Side
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Double Side">
+            Double Side
+        </label>
+
+    </div>
+
+
+    <!-- BILL BOOK -->
+    <div id="billBookOptions" class="option-box">
+
+        <label>Bill Book Size</label>
+
+        <label class="check-option">
+            <input type="checkbox" value="A4">
+            A4
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="A5">
+            A5
+        </label>
+
+    </div>
+
+
+    <!-- FLEX BANNER -->
+    <div id="flexBannerOptions" class="option-box">
+
+        <label>Flex Banner Size</label>
+
+        <input type="number" id="flexHeight" placeholder="Height">
+
+        <input type="number" id="flexWidth" placeholder="Width">
+
+    </div>
+
+
+    <!-- OFFICE STATIONERY -->
+    <div id="officeStationeryOptions" class="option-box">
+
+        <label>Office Stationery</label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Pen">
+            Pen
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Boxfile">
+            Boxfile
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Stapler">
+            Stapler
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Punch">
+            Punch
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Marker Pen">
+            Marker Pen
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Others">
+            Others
+        </label>
+
+    </div>
+
+
+    <!-- PASSPORT SIZE PHOTO -->
+    <div id="passportOptions" class="option-box">
+
+        <label>Photo Quantity</label>
+
+        <label class="check-option">
+            <input type="checkbox" value="8 Photos">
+            8
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="16 Photos">
+            16
+        </label>
+
+    </div>
+
+</div>
+
+
+<!-- PRODUCT OPTIONS -->
+
+<div id="productOptions" class="product-options">
+
+    <!-- Visiting Card -->
+    <div id="visitingCardOptions" class="option-box">
+
+        <label>Visiting Card Type</label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Single Side" name="visitingCard">
+            Single Side
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Double Side" name="visitingCard">
+            Double Side
+        </label>
+
+    </div>
+
+
+    <!-- Bill Book -->
+    <div id="billBookOptions" class="option-box">
+
+        <label>Bill Book Size</label>
+
+        <label class="check-option">
+            <input type="checkbox" value="A4" name="billBook">
+            A4
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="A5" name="billBook">
+            A5
+        </label>
+
+    </div>
+
+
+    <!-- Flex Banner -->
+    <div id="flexBannerOptions" class="option-box">
+
+        <label>Flex Banner Size</label>
+
+        <input type="number" id="flexHeight" placeholder="Height">
+
+        <input type="number" id="flexWidth" placeholder="Width">
+
+    </div>
+
+
+    <!-- Office Stationery -->
+    <div id="officeStationeryOptions" class="option-box">
+
+        <label>Office Stationery</label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Pen" name="stationery">
+            Pen
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Boxfile" name="stationery">
+            Boxfile
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Stapler" name="stationery">
+            Stapler
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Punch" name="stationery">
+            Punch
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Marker Pen" name="stationery">
+            Marker Pen
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="Others" name="stationery">
+            Others
+        </label>
+
+    </div>
+
+
+    <!-- Passport Size Photo -->
+    <div id="passportOptions" class="option-box">
+
+        <label>Photo Quantity</label>
+
+        <label class="check-option">
+            <input type="checkbox" value="4 Photos" name="passport">
+            4
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="8 Photos" name="passport">
+            8
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" value="16 Photos" name="passport">
+            16
+        </label>
+
+    </div>
+
+</div>
+
+<label>Quantity</label>
+
+<input type="number" id="qty">
+
+
+<label>Description</label>
+
+<textarea id="desc" rows="4"></textarea>
+
+
+<label>Delivery Type</label>
+
+<select id="delivery">
+
+    <option>Pickup</option>
+    <option>Home Delivery</option>
+
+</select>
+
+
+<label>Address</label>
+
+<textarea id="address" rows="3"></textarea>
+
+
+<button onclick="sendWhatsApp()">
+
+    PLACE ORDER
+
+</button>
+
+
+</div>
+
+
+
+<script>
+    function showOptions() {
+
+    // બધા options hide કરો
+    document.getElementById("visitingCardOptions").style.display = "none";
+    document.getElementById("billBookOptions").style.display = "none";
+    document.getElementById("flexBannerOptions").style.display = "none";
+    document.getElementById("officeStationeryOptions").style.display = "none";
+    document.getElementById("passportOptions").style.display = "none";
+
+    // Selected product મેળવો
+    let product = document.getElementById("product").value;
+
+
+    // Visiting Card
+    if (product === "Visiting Card") {
+        document.getElementById("visitingCardOptions").style.display = "block";
+    }
+
+
+    // Bill Book
+    else if (product === "Bill Book") {
+        document.getElementById("billBookOptions").style.display = "block";
+    }
+
+
+    // Flex Banner
+    else if (product === "Flex Banner") {
+        document.getElementById("flexBannerOptions").style.display = "block";
+    }
+
+
+    // Office Stationery
+    else if (product === "Office Stationery") {
+        document.getElementById("officeStationeryOptions").style.display = "block";
+    }
+
+
+    // Passport Size Photo
+    else if (product === "Passport Size Photo") {
+        document.getElementById("passportOptions").style.display = "block";
+    }
+
+}
+
+function sendWhatsApp() {
+
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let product = document.getElementById("product").value;
+    let qty = document.getElementById("qty").value;
+    let desc = document.getElementById("desc").value;
+    let delivery = document.getElementById("delivery").value;
+    let address = document.getElementById("address").value;
+
+    // Selected checkbox details
+    let selectedOptions = [];
+
+    document.querySelectorAll(
+        '#productOptions input[type="checkbox"]:checked'
+    ).forEach(function(checkbox) {
+        selectedOptions.push(checkbox.value);
+    });
+
+    // Flex Banner height & width
+    if (product === "Flex Banner") {
+        let height = document.getElementById("flexHeight").value;
+        let width = document.getElementById("flexWidth").value;
+
+        if (height) {
+            selectedOptions.push("Height: " + height);
+        }
+
+        if (width) {
+            selectedOptions.push("Width: " + width);
+        }
+    }
+
+    let productDetails = selectedOptions.length > 0
+        ? selectedOptions.join(", ")
+        : "Not selected";
+
+    let message =
+`*NEW ENQUIRY - NUTAN PRINTERS*
+
+Name: ${name}
+Mobile: ${mobile}
+
+Product: ${product}
+Product Details: ${productDetails}
+
+Quantity: ${qty}
+
+Description:
+${desc}
+
+Delivery Type:
+${delivery}
+
+Address:
+${address}`;
+
+    let url =
+        "https://wa.me/919724283155?text=" +
+        encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+
